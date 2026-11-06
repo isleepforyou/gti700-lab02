@@ -1,0 +1,5 @@
+context.md
+backend/node_modules
+frontend/node_modules
+.env
+__pycache__

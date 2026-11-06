@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratoire 2 — Équipe 02</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Laboratoire 2 — Équipe <span id="team">02</span></h1>
+      <div class="columns">
+        <section class="card">
+          <h2>Mes capteurs</h2>
+          <p id="local-status" class="status" role="status">Mosquitto : connexion...</p>
+          <p>Les 15 dernières mesures, reçues aux 3 secondes.</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Heure</th>
+                <th scope="col">Son (valeur brute)</th>
+                <th scope="col">Distance (cm)</th>
+              </tr>
+            </thead>
+            <tbody id="sensor-history"></tbody>
+          </table>
+        </section>
+        <section class="card">
+          <h2>Système d'alerte</h2>
+          <p id="public-status" class="status" role="status">HiveMQ : connexion...</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Équipe</th>
+                <th scope="col">Couleur</th>
+              </tr>
+            </thead>
+            <tbody id="alerts"></tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/mqtt@5.16.1/dist/mqtt.min.js"></script>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
